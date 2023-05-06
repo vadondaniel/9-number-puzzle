@@ -3,6 +3,7 @@ package boardgame;
 import boardgame.model.BoardGameModel;
 import boardgame.model.Position;
 import boardgame.model.Square;
+import boardgame.util.BoardGameMoveSelector;
 import javafx.beans.binding.ObjectBinding;
 import javafx.beans.property.ReadOnlyObjectProperty;
 import javafx.beans.value.ObservableValue;
@@ -15,7 +16,7 @@ import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import org.tinylog.Logger;
 
-import static boardgame.BoardGameMoveSelector.Phase;
+import static boardgame.util.BoardGameMoveSelector.Phase;
 
 public class BoardGameController {
 
