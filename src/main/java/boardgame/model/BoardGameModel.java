@@ -58,6 +58,7 @@ public class BoardGameModel {
         return dx + dy == 1 || dx * dy == 1;
     }
 
+    @Override
     public String toString() {
         var sb = new StringBuilder();
         for (var i = 0; i < BOARD_SIZE; i++) {
