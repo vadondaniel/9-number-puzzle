@@ -29,10 +29,13 @@ public class BoardGameController {
 
     @FXML
     private void initialize() {
-        for (var i = 0; i < board.getRowCount(); i++) {
-            for (var j = 0; j < board.getColumnCount(); j++) {
-                var square = createSquare(i, j);
-                board.add(square, j, i);
+        for (var i = 0; i < board.getColumnCount(); i++) {
+            for (var j = 0; j < board.getRowCount(); j++) {
+                var square = createSquare(j, i);
+                if (!model.isNotBlocked(new Position(j, i))) {
+                    square.getStyleClass().add("blocked");
+                }
+                board.add(square, i, j);
             }
         }
         selector.phaseProperty().addListener(this::showSelectionPhaseChange);
@@ -68,9 +71,16 @@ public class BoardGameController {
             @Override
             protected Paint computeValue() {
                 return switch (squareProperty.get()) {
-                    case NONE -> Color.TRANSPARENT;
-                    case RED -> Color.RED;
-                    case BLUE -> Color.BLUE;
+                    case NONE, BLOCKED -> Color.TRANSPARENT;
+                    case ONE -> Color.rgb(0, 0, 0);
+                    case TWO -> Color.rgb(30, 30, 30);
+                    case THREE -> Color.rgb(60, 60, 60);
+                    case FOUR -> Color.rgb(90, 90, 90);
+                    case FIVE -> Color.rgb(120, 120, 120);
+                    case SIX -> Color.rgb(150, 150, 150);
+                    case SEVEN -> Color.rgb(180, 180, 180);
+                    case EIGHT -> Color.rgb(210, 210, 210);
+                    case NINE -> Color.rgb(240, 240, 240);
                 };
             }
         };

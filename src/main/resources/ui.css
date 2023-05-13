@@ -10,3 +10,7 @@
     -fx-border-width: 5;
     -fx-border-color: slategray;
 }
+
+.square.blocked {
+    -fx-border-width: 0;
+}

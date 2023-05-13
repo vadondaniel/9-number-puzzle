@@ -2,6 +2,14 @@ package boardgame.model;
 
 public enum Square {
     NONE,
-    RED,
-    BLUE
+    ONE,
+    TWO,
+    THREE,
+    FOUR,
+    FIVE,
+    SIX,
+    SEVEN,
+    EIGHT,
+    NINE,
+    BLOCKED
 }

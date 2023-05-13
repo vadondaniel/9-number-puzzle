@@ -45,7 +45,7 @@ public class BoardGameMoveSelector {
     }
 
     private void selectFrom(Position position) {
-        if (!model.isEmpty(position)) {
+        if (!model.isEmpty(position) && model.isNotBlocked(position)) {
             from = position;
             phase.set(Phase.SELECT_TO);
             invalidSelection = false;

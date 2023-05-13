@@ -1,4 +1,6 @@
-javafx-board-game-example3
+javafx-9-number-puzzle
 ==========================
 
-Example project that demonstrates how to implement a board game in [JavaFX](https://openjfx.io/).
+Problem 2.17. 10-column-grid with an additional 3 slots above it and the goal is to move piece number 1 to the first slot while everything else stays where it is at the beginning.
+
+Every piece can move by 1 to any free slots right next to it.
