@@ -1,4 +1,4 @@
-package boardgame;
+package numberpuzzle;
 
 import javafx.application.Application;
 

@@ -1,7 +1,7 @@
-package boardgame.util;
+package numberpuzzle.util;
 
-import boardgame.model.BoardGameModel;
-import boardgame.model.Position;
+import numberpuzzle.model.BoardGameModel;
+import numberpuzzle.model.Position;
 import javafx.beans.property.ReadOnlyObjectProperty;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 

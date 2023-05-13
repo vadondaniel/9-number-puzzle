@@ -1,4 +1,4 @@
-package boardgame.model;
+package numberpuzzle.model;
 
 public record Position(int row, int col) {
 

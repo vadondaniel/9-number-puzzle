@@ -1,4 +1,4 @@
-package boardgame.model;
+package numberpuzzle.model;
 
 import javafx.beans.property.ReadOnlyObjectProperty;
 import javafx.beans.property.ReadOnlyObjectWrapper;
