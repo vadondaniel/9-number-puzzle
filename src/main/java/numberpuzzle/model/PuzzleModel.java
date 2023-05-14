@@ -3,7 +3,7 @@ package numberpuzzle.model;
 import javafx.beans.property.ReadOnlyObjectProperty;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 
-public class BoardGameModel {
+public class PuzzleModel {
 
     public static final int BOARD_SIZE_X = 10;
 
@@ -11,7 +11,7 @@ public class BoardGameModel {
 
     private ReadOnlyObjectWrapper<Square>[][] board = new ReadOnlyObjectWrapper[BOARD_SIZE_Y][BOARD_SIZE_X];
 
-    public BoardGameModel() {
+    public PuzzleModel() {
         for (var i = 0; i < BOARD_SIZE_Y; i++) {
             for (var j = 0; j < BOARD_SIZE_X; j++) {
                 board[i][j] = new ReadOnlyObjectWrapper<Square>(
@@ -91,7 +91,7 @@ public class BoardGameModel {
     }
 
     public static void main(String[] args) {
-        var model = new BoardGameModel();
+        var model = new PuzzleModel();
         System.out.println(model);
     }
 
