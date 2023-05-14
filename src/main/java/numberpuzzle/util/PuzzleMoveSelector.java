@@ -1,12 +1,18 @@
 package numberpuzzle.util;
 
-import numberpuzzle.model.BoardGameModel;
+import numberpuzzle.model.PuzzleModel;
 import numberpuzzle.model.Position;
 import javafx.beans.property.ReadOnlyObjectProperty;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 
-public class BoardGameMoveSelector {
+/**
+ * Handles the selection of the game piece selected by mouse click event.
+ */
+public class PuzzleMoveSelector {
 
+    /**
+     * Possible phases of the selection process.
+     */
     public enum Phase {
         SELECT_FROM,
         SELECT_TO,
@@ -14,13 +20,13 @@ public class BoardGameMoveSelector {
 
     }
 
-    private BoardGameModel model;
+    private PuzzleModel model;
     private ReadOnlyObjectWrapper<Phase> phase = new ReadOnlyObjectWrapper<>(Phase.SELECT_FROM);
     private boolean invalidSelection = false;
     private Position from;
     private Position to;
 
-    public BoardGameMoveSelector(BoardGameModel model) {
+    public PuzzleMoveSelector(PuzzleModel model) {
         this.model = model;
     }
 

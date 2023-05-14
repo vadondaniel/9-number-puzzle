@@ -1,9 +1,9 @@
 package numberpuzzle;
 
-import numberpuzzle.model.BoardGameModel;
+import numberpuzzle.model.PuzzleModel;
 import numberpuzzle.model.Position;
 import numberpuzzle.model.Square;
-import numberpuzzle.util.BoardGameMoveSelector;
+import numberpuzzle.util.PuzzleMoveSelector;
 import javafx.beans.binding.ObjectBinding;
 import javafx.beans.property.ReadOnlyObjectProperty;
 import javafx.beans.value.ObservableValue;
@@ -16,16 +16,16 @@ import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import org.tinylog.Logger;
 
-import static numberpuzzle.util.BoardGameMoveSelector.Phase;
+import static numberpuzzle.util.PuzzleMoveSelector.Phase;
 
-public class BoardGameController {
+public class PuzzleController {
 
     @FXML
     private GridPane board;
 
-    private BoardGameModel model = new BoardGameModel();
+    private PuzzleModel model = new PuzzleModel();
 
-    private BoardGameMoveSelector selector = new BoardGameMoveSelector(model);
+    private PuzzleMoveSelector selector = new PuzzleMoveSelector(model);
 
     @FXML
     private void initialize() {
